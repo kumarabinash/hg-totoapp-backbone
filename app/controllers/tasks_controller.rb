@@ -6,11 +6,15 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all
     render json: @tasks.as_json
+    # respond_to do |format|
+    #   format.json
+    # end
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    render json: @task.as_json
   end
 
   # GET /tasks/new
@@ -65,7 +69,7 @@ class TasksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = Task.find(params[:id, :name])
+      @task = Task.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,4 +1,4 @@
 <label>
-  <input type="checkbox" value="<%= @task.id %>" id="task"/>
+  <input type="checkbox" value="" id="task"/>
   <%= @task.name %>
 </label> 

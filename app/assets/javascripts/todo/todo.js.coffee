@@ -6,7 +6,7 @@ window.Todo =
   initialize: -> 
     #alert 'Hello from Backbone!'
     tasks_collection = new Todo.Collections.Tasks()
-    this.main_view = new Todo.Views.TasksIndex({collection: tasks_collection})
+    main_view = new Todo.Views.TasksIndex({collection: tasks_collection})
     tasks_collection.fetch({
       success: ->
         models = tasks_collection.models
